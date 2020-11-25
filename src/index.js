@@ -1,8 +1,6 @@
 const imageUrl = 'http://localhost:3000/images/1'
 document.addEventListener('DOMContentLoaded', () => {
-
     fetchImage()
-   
 })
 
 function fetchImage() {
@@ -33,9 +31,7 @@ function renderComments(image) {
     image.comments.forEach(comment => {
         const listItem = document.createElement('li')
         listItem.innerText = comment.content
-        commentContainer.append(listItem)
-        
-        
+        commentContainer.append(listItem) 
     });
     addComment()
    
@@ -46,7 +42,6 @@ function addComment() {
     const commentContainer = document.querySelector('.image-card ul')
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        
         if (e.target = form.children[0]) {
             const listItem = document.createElement('li')
             listItem.innerText = form.children[0].value
